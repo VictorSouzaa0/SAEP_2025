@@ -73,7 +73,7 @@ DATABASES = {
         'NAME': 'saep_db',
         'USER': 'root',
         'PASSWORD': 'senai',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'HOST': 'localhost',  
         'PORT': '3306',
     }
 }
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+APPEND_SLASH=False
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
