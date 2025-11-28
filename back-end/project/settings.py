@@ -44,7 +44,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
-CORS_ALLOW_ALL_ORIGNS=True 
+CORS_ALLOW_ALL_ORIGINS=True 
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+ 
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (

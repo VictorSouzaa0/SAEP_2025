@@ -1,68 +1,28 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@theme {
+  --color-amazon-dark: #131921;     
+  --color-amazon-light: #232F3E;     
+  --color-amazon-primary: #F0C14B;   
+  --color-amazon-primaryHover: #DDB347;
+  --color-amazon-secondary: #FA8900;  
+  --color-amazon-blue: #007185;     
+  --color-amazon-background: #EAEDED;
+  --color-amazon-text: #0F1111;      
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: var(--color-amazon-background);
+  color: var(--color-amazon-text);
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.btn-amazon-primary {
+  @apply w-full border border-yellow-600 rounded-md py-1 px-2 text-sm text-black shadow-sm cursor-pointer;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn-amazon-primary:hover {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+  @apply ring-2 ring-yellow-500 border-yellow-500 outline-none;
 }
