@@ -10,13 +10,10 @@ export function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            // 1. Chama a API para pegar o token
+
             await api.login(username, password);
-            
-            // 2. Salva o nome do usuário para mostrar na Navbar
+
             localStorage.setItem('user_name', username);
-            
-            // 3. Redireciona para a página inicial
             navigate('/');
         } catch (error) {
             console.error(error);
@@ -37,7 +34,7 @@ export function Login() {
                 <form onSubmit={handleLogin} className="space-y-4">
                     <div>
                         <label className="block text-sm font-bold text-gray-700 mb-1">
-                            E-mail ou usuário
+                            Usuário
                         </label>
                         <input 
                             type="text" 
@@ -65,27 +62,12 @@ export function Login() {
                     </button>
                 </form>
 
-                <div className="mt-8 text-xs text-gray-600 leading-snug">
-                    <p>
-                        Ao continuar, você concorda com as <a href="#" className="text-blue-700 hover:underline hover:text-orange-700">Condições de Uso</a> da Amazon. 
-                        Por favor verifique a <a href="#" className="text-blue-700 hover:underline hover:text-orange-700">Notificação de Privacidade</a>.
-                    </p>
-                </div>
-
-                <div className="mt-6 text-xs text-gray-600">
-                    <a href="#" className="text-blue-700 hover:underline hover:text-orange-700">
-                        Precisa de ajuda?
-                    </a>
-                </div>
             </div>
             
             <div className="mt-8 text-center text-xs text-gray-500 space-y-2 w-full max-w-sm">
                 <div className="relative mb-4">
                     <div className="absolute inset-0 flex items-center">
                         <div className="w-full border-t border-gray-200"></div>
-                    </div>
-                    <div className="relative flex justify-center text-xs">
-                        <span className="bg-white px-2 text-gray-500">Novo no sistema?</span>
                     </div>
                 </div>
             </div>
