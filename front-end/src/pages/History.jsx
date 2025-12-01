@@ -8,7 +8,6 @@ export function History() {
         const fetchHistory = async () => {
             try {
                 const data = await api.getMovements();
-                // Ordena por data (mais recente primeiro)
                 const sorted = data.sort((a, b) => new Date(b.date) - new Date(a.date));
                 setMovements(sorted);
             } catch (error) {
@@ -46,7 +45,6 @@ export function History() {
                                     {formatDate(mov.date)}
                                 </td>
                                 <td className="py-2 px-4 font-bold text-amazon-blue">
-                                    {/* Aqui ele usa o nome que vem do Backend */}
                                     {mov.product_name || `ID: ${mov.product}`}
                                 </td>
                                 <td className="py-2 px-4 text-center">
@@ -59,7 +57,6 @@ export function History() {
                                     {mov.quantity}
                                 </td>
                                 <td className="py-2 px-4 text-gray-600">
-                                    {/* Aqui ele usa o nome do usuário que vem do Backend */}
                                     {mov.responsible_name || 'Sistema'}
                                 </td>
                             </tr>

@@ -15,7 +15,7 @@ export function Navbar() {
         <nav className="bg-amazon-dark text-white shadow-md">
             <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
                 
-                <Link to="/" className="text-2xl font-bold tracking-tight hover:border border-white p-1 rounded">
+                <Link to="/products" className="text-2xl font-bold tracking-tight hover:border border-white p-1 rounded">
                     saep<span className="text-amazon-secondary"></span>
                 </Link>
 

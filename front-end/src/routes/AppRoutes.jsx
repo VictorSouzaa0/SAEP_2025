@@ -11,7 +11,7 @@ export function AppRoutes() {
         <Routes>
             <Route path="/login" element={<Login />} />
             
-            <Route path="/" element={<PrivateRoute><ProductList /></PrivateRoute>} />
+            <Route path="/products" element={<PrivateRoute><ProductList /></PrivateRoute>} />
             <Route path="/novo" element={<PrivateRoute><ProductForm /></PrivateRoute>} />
             <Route path="/editar/:id" element={<PrivateRoute><ProductForm /></PrivateRoute>} />
             <Route path="/estoque" element={<PrivateRoute><StockManager /></PrivateRoute>} />

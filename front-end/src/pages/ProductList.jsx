@@ -55,7 +55,6 @@ export function ProductList() {
                     </thead>
                     <tbody className="text-amazon-text">
                         {filtered.map(product => {
-                            // CORREÇÃO AQUI: Forçar conversão para Number para evitar erros de comparação
                             const quantity = Number(product.quantity);
                             const minStock = Number(product.min_stock);
                             const isLowStock = quantity < minStock;

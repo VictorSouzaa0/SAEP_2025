@@ -14,7 +14,7 @@ export function Login() {
             await api.login(username, password);
 
             localStorage.setItem('user_name', username);
-            navigate('/');
+            navigate('/products');
         } catch (error) {
             console.error(error);
             alert('Houve um problema com seu login. Verifique usuário e senha.');
